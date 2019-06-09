@@ -1,16 +1,3 @@
-!include ./styles/STYLENAMENAME.puml
-
-class Car {
-  #String data
-  void methods()
-}
-
-together {
-interface Driver - Car : drives >
-Car o- Wheel : has 4 >
-Car -- Person : < owns
-}
-
 class Object << general >>
 Object <|--- ArrayList
 
