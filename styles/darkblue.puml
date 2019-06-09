@@ -1,0 +1,52 @@
+@startuml
+
+!define FONTNAME "Verdana"
+!define FONTSIZE 9
+
+!define ARROWCOLOR fff
+!define ARROWFONTCOLOR bbb
+
+!define PRIMARY fff
+!define SECONDARY aaa
+!define ACCENT 1a66c2
+!define ACCENTDARK 002642
+
+!define BORDERCOLOR 1b1b1b
+!define BOXBG 2e2e2e
+skinparam stereotypeCBackgroundColor 1a66c2
+skinparam backgroundColor 707070
+
+skinparam circledCharacter {
+  radius 6
+  fontSize FONTSIZE
+  fontName FONTNAME
+}
+
+skinparam class {
+  backgroundColor BOXBG
+  borderColor BORDERCOLOR
+
+  fontColor PRIMARY
+  fontName FONTNAME
+  fontSize FONTSIZE
+
+	arrowColor ARROWCOLOR
+	arrowFontName FONTNAME
+	arrowFontColor ARROWFONTCOLOR
+	arrowFontSize FONTSIZE
+
+  attributeFontColor SECONDARY
+  attributeFontSize FONTSIZE
+  attributeIconSize FONTSIZE
+  stereotypeFontColor SECONDARY
+  stereotypeFontSize FONTSIZE
+}
+
+skinparam note {
+  backgroundColor ACCENT
+  borderColor ACCENTDARK
+
+  fontColor PRIMARY
+  fontName FONTNAME
+  fontSize FONTSIZE
+}
