@@ -81,6 +81,32 @@ skinparam backgroundColor fff
 skinparam backgroundColor 777
 !endif
 
+!definelong FONTSTYLE
+  fontColor PRIMARY
+  fontName FONTNAME
+  fontSize FONTSIZE
+  stereotypeFontColor SECONDARY
+  stereotypeFontSize FONTSIZE
+!enddefinelong
+
+!definelong BASICSTYLE
+  backgroundColor BOXBG
+  borderColor BORDERCOLOR
+!enddefinelong
+
+!definelong ACCENTSTYLE
+  backgroundColor ACCENT
+  borderColor ACCENTDARK
+!enddefinelong
+
+!definelong ARROWSTYLE
+  arrowColor ARROWCOLOR
+  arrowFontName FONTNAME
+  arrowFontColor ARROWFONTCOLOR
+  arrowFontSize FONTSIZE
+!enddefinelong
+
+' Class diagrams
 
 skinparam circledCharacter {
   radius 8
@@ -89,31 +115,130 @@ skinparam circledCharacter {
 }
 
 skinparam class {
-  backgroundColor BOXBG
-  borderColor BORDERCOLOR
-
-  fontColor PRIMARY
-  fontName FONTNAME
-  fontSize FONTSIZE
-
-	arrowColor ARROWCOLOR
-	arrowFontName FONTNAME
-	arrowFontColor ARROWFONTCOLOR
-	arrowFontSize FONTSIZE
+  BASICSTYLE
+  FONTSTYLE
+  ARROWSTYLE
 
   attributeFontColor SECONDARY
   attributeFontSize FONTSIZE
   attributeIconSize FONTSIZE
-  stereotypeFontColor SECONDARY
-  stereotypeFontSize FONTSIZE
 }
+
+' Sequence diagrams
+
+skinparam actor {
+  ACCENTSTYLE
+  FONTSTYLE
+}
+
+skinparam participant {
+  BASICSTYLE
+  FONTSTYLE
+}
+
+' Component diagrams
+
+skinparam interface {
+  ACCENTSTYLE
+  FONTSTYLE
+}
+
+skinparam component {
+  BASICSTYLE
+  FONTSTYLE
+}
+
+skinparam node {
+  BASICSTYLE
+  FONTSTYLE
+}
+
+skinparam database {
+  BASICSTYLE
+  FONTSTYLE
+}
+
+skinparam queue {
+  BASICSTYLE
+  FONTSTYLE
+}
+
+' Use Case diagrams
+
+skinparam usecase {
+  BASICSTYLE
+  FONTSTYLE
+  ARROWSTYLE
+}
+
+skinparam activity {
+  BASICSTYLE
+  FONTSTYLE
+  ARROWSTYLE
+}
+
+skinparam sequence {
+  FONTSTYLE
+  ARROWSTYLE
+
+  lifeLineBorderColor ARROWCOLOR
+  lifeLineBackgroundColor ARROWFONTCOLOR
+}
+
+skinparam boundary {
+  ACCENTSTYLE
+  FONTSTYLE
+}
+
+skinparam control {
+  ACCENTSTYLE
+  FONTSTYLE
+}
+
+skinparam entity {
+  ACCENTSTYLE
+  FONTSTYLE
+}
+
+' State diagrams
+
+skinparam state {
+  BASICSTYLE
+  FONTSTYLE
+  ARROWSTYLE
+  startColor ACCENT
+  endColor ACCENTDARK
+}
+
+' Object diagrams
+
+skinparam object {
+  BASICSTYLE
+  FONTSTYLE
+  ARROWSTYLE
+}
+
+' Common
 
 skinparam note {
-  backgroundColor ACCENT
-  borderColor ACCENTDARK
-
-  fontColor PRIMARY
-  fontName FONTNAME
-  fontSize FONTSIZE
+  ACCENTSTYLE
+  FONTSTYLE
 }
+
+skinparam cloud {
+  BASICSTYLE
+  FONTSTYLE
+  ARROWSTYLE
+}
+
+skinparam rectangle {
+  BASICSTYLE
+  FONTSTYLE
+}
+
+skinparam storage {
+  BASICSTYLE
+  FONTSTYLE
+}
+
 @enduml

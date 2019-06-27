@@ -8,9 +8,11 @@ Yes, RedDress is a Matrix reference.
 
 ## How to use:
 ```
+@startuml
 !define LIGHTORANGE
 !includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
-!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/example.puml
+' your UML '
+@enduml
 ```
 ## Examples:
 ### DARKBLUE
