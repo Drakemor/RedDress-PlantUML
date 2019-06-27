@@ -14,6 +14,9 @@ Yes, RedDress is a Matrix reference.
 ' your UML '
 @enduml
 ```
+
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/EM-cvRubP4g/0.jpg)](https://youtu.be/EM-cvRubP4g)
+
 ## Examples:
 ### DARKBLUE
 ![DARKBLUE](http://www.plantuml.com/plantuml/png/hSqn3e9044RXdbF00MHwApHOYOaXuG0Z-ol4tO7Cp4QzlJJUmEfrtslCMJsdM5G1zrbGjeV-VEo6Kr7DCiOSK4xkg-s9b5_rO_Oftx91nqKSulMu96gLdqYBKe_GAinsryZYmwMZnEPGClz4rEis-g-BDwVr9pUGiFKB)
