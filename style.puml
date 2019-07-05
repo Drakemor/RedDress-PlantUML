@@ -81,30 +81,30 @@ skinparam backgroundColor fff
 skinparam backgroundColor 777
 !endif
 
-!definelong FONTSTYLE
+!function font_style()
   fontColor PRIMARY
   fontName FONTNAME
   fontSize FONTSIZE
   stereotypeFontColor SECONDARY
   stereotypeFontSize FONTSIZE
-!enddefinelong
+!endfunction
 
-!definelong BASICSTYLE
+!function basic_style()
   backgroundColor BOXBG
   borderColor BORDERCOLOR
-!enddefinelong
+!endfunction
 
-!definelong ACCENTSTYLE
+!function accent_style()
   backgroundColor ACCENT
   borderColor ACCENTDARK
-!enddefinelong
+!endfunction
 
-!definelong ARROWSTYLE
+!function arrow_style()
   arrowColor ARROWCOLOR
   arrowFontName FONTNAME
   arrowFontColor ARROWFONTCOLOR
   arrowFontSize FONTSIZE
-!enddefinelong
+!endfunction
 
 ' Class diagrams
 
@@ -115,9 +115,9 @@ skinparam circledCharacter {
 }
 
 skinparam class {
-  BASICSTYLE
-  FONTSTYLE
-  ARROWSTYLE
+  basic_style()
+  font_style()
+  arrow_style()
 
   attributeFontColor SECONDARY
   attributeFontSize FONTSIZE
@@ -127,85 +127,85 @@ skinparam class {
 ' Sequence diagrams
 
 skinparam actor {
-  ACCENTSTYLE
-  FONTSTYLE
+  accent_style()
+  font_style()
 }
 
 skinparam participant {
-  BASICSTYLE
-  FONTSTYLE
+  basic_style()
+  font_style()
 }
 
 ' Component diagrams
 
 skinparam interface {
-  ACCENTSTYLE
-  FONTSTYLE
+  accent_style()
+  font_style()
 }
 
 skinparam component {
-  BASICSTYLE
-  FONTSTYLE
+  basic_style()
+  font_style()
 }
 
 skinparam node {
-  BASICSTYLE
-  FONTSTYLE
+  basic_style()
+  font_style()
 }
 
 skinparam database {
-  BASICSTYLE
-  FONTSTYLE
+  basic_style()
+  font_style()
 }
 
 skinparam queue {
-  BASICSTYLE
-  FONTSTYLE
+  basic_style()
+  font_style()
 }
 
 ' Use Case diagrams
 
 skinparam usecase {
-  BASICSTYLE
-  FONTSTYLE
-  ARROWSTYLE
+  basic_style()
+  font_style()
+  arrow_style()
 }
 
 skinparam activity {
-  BASICSTYLE
-  FONTSTYLE
-  ARROWSTYLE
+  basic_style()
+  font_style()
+  arrow_style()
 }
 
 skinparam sequence {
-  FONTSTYLE
-  ARROWSTYLE
+  font_style()
+  arrow_style()
 
   lifeLineBorderColor ARROWCOLOR
   lifeLineBackgroundColor ARROWFONTCOLOR
 }
 
 skinparam boundary {
-  ACCENTSTYLE
-  FONTSTYLE
+  accent_style()
+  font_style()
 }
 
 skinparam control {
-  ACCENTSTYLE
-  FONTSTYLE
+  accent_style()
+  font_style()
 }
 
 skinparam entity {
-  ACCENTSTYLE
-  FONTSTYLE
+  accent_style()
+  font_style()
 }
 
 ' State diagrams
 
 skinparam state {
-  BASICSTYLE
-  FONTSTYLE
-  ARROWSTYLE
+  basic_style()
+  font_style()
+  arrow_style()
   startColor ACCENT
   endColor ACCENTDARK
 }
@@ -213,32 +213,32 @@ skinparam state {
 ' Object diagrams
 
 skinparam object {
-  BASICSTYLE
-  FONTSTYLE
-  ARROWSTYLE
+  basic_style()
+  font_style()
+  arrow_style()
 }
 
 ' Common
 
 skinparam note {
-  ACCENTSTYLE
-  FONTSTYLE
+  accent_style()
+  font_style()
 }
 
 skinparam cloud {
-  BASICSTYLE
-  FONTSTYLE
-  ARROWSTYLE
+  basic_style()
+  font_style()
+  arrow_style()
 }
 
 skinparam rectangle {
-  BASICSTYLE
-  FONTSTYLE
+  basic_style()
+  font_style()
 }
 
 skinparam storage {
-  BASICSTYLE
-  FONTSTYLE
+  basic_style()
+  font_style()
 }
 
 @enduml
