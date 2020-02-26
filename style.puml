@@ -136,6 +136,11 @@ skinparam participant {
   font_style()
 }
 
+skinparam collections {
+  basic_style()
+  font_style()
+}
+
 ' Component diagrams
 
 skinparam interface {
