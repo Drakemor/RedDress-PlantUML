@@ -68,6 +68,8 @@ skinparam stereotypeCBackgroundColor ACCENT
 !define ARROWFONTCOLOR 333
 !define BORDERCOLOR aaa
 !define BOXBG ccc
+!define LIGHTBORDERCOLOR cccccc
+!define LIGHTBG e0e0e0
 skinparam backgroundColor fff
 !endif
 
@@ -78,6 +80,8 @@ skinparam backgroundColor fff
 !define ARROWFONTCOLOR bbb
 !define BORDERCOLOR 1b1b1b
 !define BOXBG 2e2e2e
+!define LIGHTBORDERCOLOR 767676
+!define LIGHTBG 575757
 skinparam backgroundColor 777
 !endif
 
@@ -92,6 +96,11 @@ skinparam backgroundColor 777
 !function basic_style()
   backgroundColor BOXBG
   borderColor BORDERCOLOR
+!endfunction
+
+!function light_style()
+  backgroundColor LIGHTBG
+  borderColor LIGHTBORDERCOLOR
 !endfunction
 
 !function accent_style()
@@ -138,6 +147,11 @@ skinparam participant {
 
 skinparam collections {
   basic_style()
+  font_style()
+}
+
+skinparam SequenceBox{
+  light_style()
   font_style()
 }
 
