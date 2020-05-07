@@ -1,126 +1,121 @@
 @startuml
 
-!ifndef FONTNAME
-!define FONTNAME "Verdana"
-!endif
-
-!ifndef FONTSIZE
-!define FONTSIZE 11
-!endif
+!$FONTNAME = "Verdana"
+!$FONTSIZE = 11
 
 !ifdef DARKBLUE
 skinparam backgroundColor 777
-!define ACCENT 1a66c2
-!define ACCENTDARK 002642
-skinparam stereotypeCBackgroundColor ACCENT
+!$ACCENT = "1a66c2"
+!$ACCENTDARK = "002642"
+skinparam stereotypeCBackgroundColor $ACCENT
 !define DARKSTYLE
 !endif
 !ifdef LIGHTBLUE
-!define ACCENT 2a86e2
-!define ACCENTDARK 1a66c2
-skinparam stereotypeCBackgroundColor ACCENTDARK
+!$ACCENT = "2a86e2"
+!$ACCENTDARK = "1a66c2"
+skinparam stereotypeCBackgroundColor $ACCENTDARK
 !define LIGHTSTYLE
 !endif
 
 !ifdef DARKRED
-!define ACCENT 880000
-!define ACCENTDARK 330000
-skinparam stereotypeCBackgroundColor ACCENT
+!$ACCENT = "880000"
+!$ACCENTDARK = "330000"
+skinparam stereotypeCBackgroundColor $ACCENT
 !define DARKSTYLE
 !endif
 !ifdef LIGHTRED
-!define ACCENT CC0033
-!define ACCENTDARK AA0033
-skinparam stereotypeCBackgroundColor ACCENTDARK
+!$ACCENT = "CC0033"
+!$ACCENTDARK = "AA0033"
+skinparam stereotypeCBackgroundColor $ACCENTDARK
 !define LIGHTSTYLE
 !endif
 
 !ifdef DARKGREEN
-!define ACCENT 228811
-!define ACCENTDARK 113300
-skinparam stereotypeCBackgroundColor ACCENT
+!$ACCENT = "228811"
+!$ACCENTDARK = "113300"
+skinparam stereotypeCBackgroundColor $ACCENT
 !define DARKSTYLE
 !endif
 !ifdef LIGHTGREEN
-!define ACCENT 55BB33
-!define ACCENTDARK 338822
-skinparam stereotypeCBackgroundColor ACCENTDARK
+!$ACCENT = "55BB33"
+!$ACCENTDARK = "338822"
+skinparam stereotypeCBackgroundColor $ACCENTDARK
 !define LIGHTSTYLE
 !endif
 
 !ifdef DARKORANGE
-!define ACCENT BB6600
-!define ACCENTDARK 662200
-skinparam stereotypeCBackgroundColor ACCENT
+!$ACCENT = "BB6600"
+!$ACCENTDARK = "662200"
+skinparam stereotypeCBackgroundColor $ACCENT
 !define DARKSTYLE
 !endif
 !ifdef LIGHTORANGE
-!define ACCENT FF8800
-!define ACCENTDARK BB6600
-skinparam stereotypeCBackgroundColor ACCENT
+!$ACCENT = "FF8800"
+!$ACCENTDARK = "BB6600"
+skinparam stereotypeCBackgroundColor $ACCENT
 !define LIGHTSTYLE
 !endif
 
 !ifdef LIGHTSTYLE
-!define PRIMARY 000
-!define SECONDARY 333
-!define ARROWCOLOR 000
-!define ARROWFONTCOLOR 333
-!define BORDERCOLOR aaa
-!define BOXBG ccc
-!define LIGHTBORDERCOLOR cccccc
-!define LIGHTBG e0e0e0
+!$PRIMARYFONTCOLOR = "000"
+!$SECONDARY = "333"
+!$ARROWCOLOR = "000"
+!$ARROWFONTCOLOR = "333"
+!$BORDERCOLOR = "aaa"
+!$BOXBG = "ccc"
+!$LIGHTBORDERCOLOR = "cccccc"
+!$LIGHTBG = "e0e0e0"
 skinparam backgroundColor fff
 !endif
 
 !ifdef DARKSTYLE
-!define PRIMARY fff
-!define SECONDARY aaa
-!define ARROWCOLOR fff
-!define ARROWFONTCOLOR bbb
-!define BORDERCOLOR 1b1b1b
-!define BOXBG 2e2e2e
-!define LIGHTBORDERCOLOR 767676
-!define LIGHTBG 575757
+!$PRIMARYFONTCOLOR = "fff"
+!$SECONDARY = "aaa"
+!$ARROWCOLOR = "fff"
+!$ARROWFONTCOLOR = "bbb"
+!$BORDERCOLOR = "1b1b1b"
+!$BOXBG = "2e2e2e"
+!$LIGHTBORDERCOLOR = "767676"
+!$LIGHTBG = "575757"
 skinparam backgroundColor 777
 !endif
 
-!function font_style()
-  fontColor PRIMARY
-  fontName FONTNAME
-  fontSize FONTSIZE
-  stereotypeFontColor SECONDARY
-  stereotypeFontSize FONTSIZE
-!endfunction
+!procedure font_style()
+  fontColor $PRIMARYFONTCOLOR
+  fontName $FONTNAME
+  fontSize $FONTSIZE
+  stereotypeFontColor $SECONDARY
+  stereotypeFontSize $FONTSIZE
+!endprocedure
 
-!function basic_style()
-  backgroundColor BOXBG
-  borderColor BORDERCOLOR
-!endfunction
+!procedure basic_style()
+  backgroundColor $BOXBG
+  borderColor $BORDERCOLOR
+!endprocedure
 
-!function light_style()
-  backgroundColor LIGHTBG
-  borderColor LIGHTBORDERCOLOR
-!endfunction
+!procedure light_style()
+  backgroundColor $LIGHTBG
+  borderColor $LIGHTBORDERCOLOR
+!endprocedure
 
-!function accent_style()
-  backgroundColor ACCENT
-  borderColor ACCENTDARK
-!endfunction
+!procedure accent_style()
+  backgroundColor $ACCENT
+  borderColor $ACCENTDARK
+!endprocedure
 
-!function arrow_style()
-  arrowColor ARROWCOLOR
-  arrowFontName FONTNAME
-  arrowFontColor ARROWFONTCOLOR
-  arrowFontSize FONTSIZE
-!endfunction
+!procedure arrow_style()
+  arrowColor $ARROWCOLOR
+  arrowFontName $FONTNAME
+  arrowFontColor $ARROWFONTCOLOR
+  arrowFontSize $FONTSIZE
+!endprocedure
 
 ' Class diagrams
 
 skinparam circledCharacter {
   radius 8
-  fontSize FONTSIZE
-  fontName FONTNAME
+  fontSize $FONTSIZE
+  fontName $FONTNAME
 }
 
 skinparam class {
@@ -128,9 +123,9 @@ skinparam class {
   font_style()
   arrow_style()
 
-  attributeFontColor SECONDARY
-  attributeFontSize FONTSIZE
-  attributeIconSize FONTSIZE
+  attributeFontColor $SECONDARY
+  attributeFontSize $FONTSIZE
+  attributeIconSize $FONTSIZE
 }
 
 ' Sequence diagrams
@@ -200,8 +195,8 @@ skinparam sequence {
   font_style()
   arrow_style()
 
-  lifeLineBorderColor ARROWCOLOR
-  lifeLineBackgroundColor ARROWFONTCOLOR
+  lifeLineBorderColor $ARROWCOLOR
+  lifeLineBackgroundColor $ARROWFONTCOLOR
 }
 
 skinparam boundary {
@@ -225,8 +220,8 @@ skinparam state {
   basic_style()
   font_style()
   arrow_style()
-  startColor ACCENT
-  endColor ACCENTDARK
+  startColor $ACCENT
+  endColor $ACCENTDARK
 }
 
 ' Object diagrams
