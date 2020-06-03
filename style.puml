@@ -1,7 +1,12 @@
 @startuml
 
+!if (%not(%variable_exists("$FONTNAME")))
 !$FONTNAME = "Verdana"
+!endif
+
+!if (%not(%variable_exists("$FONTSIZE")))
 !$FONTSIZE = 11
+!endif
 
 !ifdef DARKBLUE
 skinparam backgroundColor 777
@@ -10,6 +15,7 @@ skinparam backgroundColor 777
 skinparam stereotypeCBackgroundColor $ACCENT
 !define DARKSTYLE
 !endif
+
 !ifdef LIGHTBLUE
 !$ACCENT = "2a86e2"
 !$ACCENTDARK = "1a66c2"
@@ -23,6 +29,7 @@ skinparam stereotypeCBackgroundColor $ACCENTDARK
 skinparam stereotypeCBackgroundColor $ACCENT
 !define DARKSTYLE
 !endif
+
 !ifdef LIGHTRED
 !$ACCENT = "CC0033"
 !$ACCENTDARK = "AA0033"
@@ -36,6 +43,7 @@ skinparam stereotypeCBackgroundColor $ACCENTDARK
 skinparam stereotypeCBackgroundColor $ACCENT
 !define DARKSTYLE
 !endif
+
 !ifdef LIGHTGREEN
 !$ACCENT = "55BB33"
 !$ACCENTDARK = "338822"
@@ -49,6 +57,7 @@ skinparam stereotypeCBackgroundColor $ACCENTDARK
 skinparam stereotypeCBackgroundColor $ACCENT
 !define DARKSTYLE
 !endif
+
 !ifdef LIGHTORANGE
 !$ACCENT = "FF8800"
 !$ACCENTDARK = "BB6600"
