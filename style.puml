@@ -204,8 +204,8 @@ skinparam sequence {
   font_style()
   arrow_style()
 
-  lifeLineBorderColor $ARROWCOLOR
-  lifeLineBackgroundColor $ARROWFONTCOLOR
+  lifeLineBorderColor $ACCENT
+  lifeLineBackgroundColor $LIGHTBG
 }
 
 skinparam boundary {
